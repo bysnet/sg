@@ -1,0 +1,67 @@
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  color: #fff;
+  background: black;
+  overflow: hidden;
+}
+.header {
+  margin: 50px auto;
+  text-align: center;
+}
+.header h1 {
+  font-size: 4rem;
+  letter-spacing: 2px;
+  text-shadow: 0 0 20px #0ff;
+}
+.header p {
+  font-size: 1.2rem;
+  text-shadow: 0 0 15px rgba(0, 255, 200, 0.5);
+}
+.companies {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  padding: 40px;
+}
+.company-card {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  position: relative;
+  text-align: center;
+  transition: transform 0.5s, box-shadow 0.5s;
+}
+.company-card:hover {
+  transform: translateY(-10px) scale(1.1);
+  box-shadow: 0 0 30px rgba(0, 255, 200, 0.8);
+}
+.holo-preview {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle, rgba(0, 255, 255, 0.1), transparent);
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.company-card:hover .holo-preview {
+  opacity: 1;
+}
+#ai-assistant {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 255, 200, 0.6);
+  font-size: 1rem;
+}
+    
